@@ -4,7 +4,7 @@
 
 CREATE TABLE curso (
 -- Código de curso (clave primaria, entero no nulo)
-  id INT NOT NULL PRIMARY KEY, 
+  codigo INT NOT NULL PRIMARY KEY, 
 -- Nombre (varchar no nulo)
   nombre VARCHAR(255) NOT NULL,
 -- Descripcion (varchar)
@@ -17,24 +17,24 @@ CREATE TABLE curso (
 ALTER TABLE curso ADD cupo INT;
 
 -- Inserte datos en la tabla:
-INSERT INTO curso (id, nombre, descripcion, turno, cupo) 
+INSERT INTO curso (codigo, nombre, descripcion, turno, cupo) 
 VALUES(101, "Algoritmos", "Algoritmos y Estructuras de Datos", "Mañana", 35);
 
-INSERT INTO curso (id, nombre, descripcion, turno, cupo) 
+INSERT INTO curso (codigo, nombre, descripcion, turno, cupo) 
 VALUES(102, "Matemática Discreta", "", "Tarde", 30);
 
 -- Cree un registro con el nombre nulo y verifique que no funciona.
-INSERT INTO curso (id, nombre, descripcion, turno, cupo) 
+INSERT INTO curso (codigo, nombre, descripcion, turno, cupo) 
 VALUES(103, null, "", "Tarde", 30);
 -- ## SqLite.js
 -- ## NOT NULL constraint failed: curso.nombre
 
 
 -- Cree un registro con la clave primaria repetida y verifique que no funciona.
-INSERT INTO curso (id, nombre, descripcion, turno, cupo) 
+INSERT INTO curso (codigo, nombre, descripcion, turno, cupo) 
 VALUES(102, "SQL basico", "", "Tarde", 30);
 -- ## SqLite.js
--- ## UNIQUE constraint failed: curso.id
+-- ## UNIQUE constraint failed: curso.codigo
 
 
 -- Actualice, para todos los cursos, el cupo en 25.
