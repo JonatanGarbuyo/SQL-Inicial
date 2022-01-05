@@ -3,7 +3,7 @@
 -- Dadas las tablas:
 -- PROFESOR
 -- CURSO
--- Donde el campo PROFESOR_id de la tabla CURSO es una clave foránea que referencia a PROFESOR, responda las siguientes preguntas
+-- Donde el campo PROFESOR_id de la tabla CURSO es una clave foránea que referencia a PROFESOR, 
 
 CREATE TABLE profesor (
   id INT NOT NULL PRIMARY KEY, 
