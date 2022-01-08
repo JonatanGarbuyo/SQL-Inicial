@@ -9,7 +9,7 @@ CREATE TABLE profesor (
   id INT NOT NULL PRIMARY KEY, 
   nombre TEXT NOT NULL,
   apellido TEXT,
-  fecha_nacimiento TEXT,
+  fecha_nacimiento DATE,
   salario INT
 );
 
